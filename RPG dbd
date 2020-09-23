@@ -1,0 +1,21 @@
+`pra este comando você vai precisar criar a variável
+life = 0
+coin = 0
+raid = 0
+
+$nomention
+$onlyIf[$getUserVar[life]>=0;<@$authorID> Você não tem HP o suficiente para ir a raid! Para recuperar o seu HP use o comando <y!curar>.]
+
+$setUserVar[life;$sub[$getUserVar[life];$random[5;25]]]
+
+$setUserVar[coin;$sum[$getUserVar[coin];$random[100;500]]]
+
+$setUserVar[raid;$sum[$getUserVar[raid];$randomText[1;1]]]
+
+$title[$randomText[🔥 Dungeon do Dragão 🔥;💀 Dungeon dos Lich's 💀;🌊 Dungeon oceânia 🌊;🍃 Dungeon dos Goblins 🍃;♈ Dungeon do Void ♈;🦊 Dungeon das raposas 🦊;🌋 Dungeon vulcânica 🌋;☘ Dungeon do slime ☘;👻 Dungeon dos fantasmas 👻;❄️ Dungeon de neve ❄️;🌩️ Dungeon da tempestade 🌩️;⛏ Dungeon da mina abandonada ⛏]]
+
+$description[Você foi atacado por $randomText[uma orda de goblins;um dragão de duas cabeças;um troll;um lich;uma orda de dragões;um goblin;um rei goblin;um orc;um rei orc;uma orda de orcs;uma raposa encantada;um void;um fantasma]
+
+$addField[🎮 Resultados 🎮;
+$username você ganhou $random[100;500] coins, e perdeu $random[5;25] de HP]]
+$color[b50f0f]`
